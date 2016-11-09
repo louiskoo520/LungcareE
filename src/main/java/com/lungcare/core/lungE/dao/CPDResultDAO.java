@@ -1,6 +1,8 @@
 package com.lungcare.core.lungE.dao;
 
+import com.lungcare.core.lungE.model.CPDResult;
+
 public interface CPDResultDAO {
-public void LoadCPDResult();
-public void SaveCPDResult();
+	public CPDResult LoadCPDResult();
+	public void SaveCPDResult(CPDResult cpdResult);
 }

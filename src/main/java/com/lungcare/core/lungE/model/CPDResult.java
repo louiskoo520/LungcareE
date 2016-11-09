@@ -55,4 +55,44 @@ public class CPDResult {
 	}
      
      
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("Matrix : ");
+		stringBuilder.append("\n");
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				double ds = CPDMatrix[i][j];
+				stringBuilder.append(ds);
+				stringBuilder.append(" ");
+				
+			}
+			
+			stringBuilder.append("\n");
+			
+		}
+		
+		stringBuilder.append("CPDScale : ");
+		stringBuilder.append("\n");
+		stringBuilder.append(CPDScale);
+		stringBuilder.append("\n");
+		
+		stringBuilder.append("Dst : ");
+		stringBuilder.append("\n");
+		for (int i = 0; i < Dst.size(); i++) {
+			stringBuilder.append(Dst.get(i)[0]+" "+Dst.get(i)[1]+" "+Dst.get(i)[2]);
+			stringBuilder.append("\n");
+		}
+		stringBuilder.append("\n");
+		
+		stringBuilder.append("Src : ");
+		stringBuilder.append("\n");
+		for (int i = 0; i < Src.size(); i++) {
+			stringBuilder.append(Src.get(i)[0]+" "+Src.get(i)[1]+" "+Src.get(i)[2]);
+			stringBuilder.append("\n");
+		}
+		stringBuilder.append("\n");
+		return stringBuilder.toString();
+	}
 }
